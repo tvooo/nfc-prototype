@@ -13,7 +13,10 @@
     "prototyping",
     "web app"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "socket.io": "~0.9.16",
+    "prompt": "~0.2.12"
+  },
   "devDependencies": {
     "grunt-contrib-connect": "~0.5.0",
     "grunt": "~0.4.2"

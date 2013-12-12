@@ -6,12 +6,14 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
   <meta name="mobile-web-app-capable" content="yes">
 
-  <title>Fries</title>
+  <title>Evoke</title>
 
   <link rel="shortcut icon" href="favicon.png" />
 
   <link rel="stylesheet" href="bower_components/fries/dist/themes/holo-dark/holo-dark.min.css" />
-
+  <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <script src="bower_components/socket.io-client/dist/socket.io.js"></script>
+  <script src="bower_components/jquery/jquery.js"></script>
   <!-- For demo purposes only -->
   <style type="text/css">
   body {
@@ -50,6 +52,12 @@
     color: #222;
     font-size: 11px;
   }
+  .icon-logo {
+    background: url(evoke-ico.png) no-repeat center center;
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+  }
   </style>
 </head>
 <body>
@@ -57,42 +65,18 @@
   <div class="page">
     <header class="action-bar fixed-top">
       <a href="javascript: void(0);" class="app-icon action" data-ignore="true">
-        <i class="icon-fries"></i>
+        <i class="icon-logo"></i>
       </a>
-      <h1 class="title">Fries</h1>
+      <h1 class="title">Evoke</h1>
+      <ul class="actions pull-right" data-overflow="false">
+        <li><a href="settings.html" class="action" title="Settings" data-transition="push"><i class="icon-settings"></i></a></li>
+      </ul>
     </header>
 
     <div class="content">
-      <ul class="list inset">
-        <li class="list-divider">Fries Components</li>
-        <li class="list-item-single-line selectable"><a href="template.html" data-transition="push">Action Bars</a></li>
-        <li class="list-item-single-line selectable"><a href="fixed-tabs-and-lists.html" data-transition="push">Fixed Tabs and Lists</a></li>
-        <li class="list-item-single-line selectable"><a href="spinners.html" data-transition="push">Spinners</a></li>
-        <li class="list-item-single-line selectable"><a href="forms-and-page-actions.html" data-transition="push">Forms and Page Actions</a></li>
-        <li class="list-item-single-line selectable"><a href="iconography.html" data-transition="push">Iconography</a></li>
-        <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true" id="open-dialog">Dialogs</a></li>
-        <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true" id="show-toast">Toast Notifications</a></li>
-      </ul>
-
-      <div class="footnote">Copyright &copy; 2013. Jaune Sarmiento. Fries.</div>
+      <div style="width:100%;height:100%;background:url(evoke-a-01.png) no-repeat center center;background-size:cover;"></div>
     </div>
 
-    <div class="dialogs">
-      <div id="my-dialog" class="dialog">
-        <header class="dialog-title-region">
-          <h1 class="title">Howdy!</h1>
-        </header>
-        <div class="dialog-content">
-          <div class="inset">
-            <p>This is an example of a dialog</p>
-          </div>
-        </div>
-        <ul class="dialog-actions">
-          <li><a href="javascript: void(0);" class="dialog-cancel-button">Cancel</a></li>
-          <li><a href="javascript: void(0);" class="dialog-ok-button">OK</a></li>
-        </ul>
-      </div>
-    </div>
   </div>
 
 
@@ -101,5 +85,14 @@
   <script src="js/fingerblast.js"></script>
 
   <script src="js/example.js"></script>
+  <script src="js/script.js"></script>
+
+  <div style="display:none">
+    <a href="item1.html" data-transition="push" id="item1"></a>
+    <a href="item2.html" data-transition="push" id="item2"></a>
+    <a href="settings.html" data-transition="push" id="settings"></a>
+    <a href="index.html" data-transition="push" id="index"></a>
+    <a href="loading.html" data-transition="push" id="loading"></a>
+  </div>
 </body>
 </html>
