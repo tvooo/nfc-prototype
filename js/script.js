@@ -17,10 +17,15 @@ $(function() {
         socket.on('evoke', function (data) {
             console.log( 'Got command!');
             console.log( data );
+
             var touchEvent = document.createEvent("HTMLEvents");
 
             touchEvent.initEvent("touchend", true, true);
-            $('#' + data.item).get(0).dispatchEvent(touchEvent);
+
+            var el = $('#' + data.item);
+            if ( $('#' + data.item).length > 0 ) {
+                $('#' + data.item).get(0).dispatchEvent(touchEvent);
+            }
 
             socket.emit('controlme');
         });
